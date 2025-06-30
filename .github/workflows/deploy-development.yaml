@@ -1,44 +1,40 @@
-name: Deploy to GitHub Pages
-
+name: wf-cd-develop
 on:
   push:
     branches:
-      - develop   # ✅ triggered on any push to develop
-
-permissions:
-  pages: write
-  id-token: write
-
+      - develop
 jobs:
-  build:
-    name: Build Website
+  build-job-develop:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Repository On the Runner
         uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-
-      - name: Install Parcel
-        run: npm install parcel
-
-      - name: Build Website
+      - name: Build Static Wesbite With Parcel
         run: npx parcel build "./src/index.html" --dist-dir "./dist" --public-url "./"
-
-      - name: Upload artifact
+      - name:  Upload Build Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
-
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
+          path: "./dist"
+          name: "build-artifact-develop"
+  deploy-job-develop:
+    needs: "build-job-develop"
     runs-on: ubuntu-latest
     environment:
-      name: github-pages
+      name: "develop-env"
+    permissions:
+      pages: write
+      id-token: write
     steps:
-      - name: Deploy
+      - name: Deploy Website On GH-Pages
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: "build-artifact-develop"
+          token: "${{github.token}}"
+
+    
+
+
+
+
+
+
