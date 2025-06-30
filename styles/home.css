@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
   
   body {
@@ -24,7 +24,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 50px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
     position: fixed;
     width: 100%;
     z-index: 100;
@@ -409,5 +409,13 @@
     
     .section-title {
       font-size: 28px;
+    }
+    
+    nav {
+      padding: 15px 20px;
+    }
+    
+    .menu li {
+      margin-left: 15px;
     }
   }
