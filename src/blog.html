@@ -2,35 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog - My Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Insights Blog | TechFuture</title>
+  
+  <link rel="stylesheet" href="../styles/home.css">
   <link rel="stylesheet" href="../styles/blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>My Blog Posts</h1>
-    <nav>
-     
-      <a href="index.html">Index</a>
-      <a href="index.html">Home</a>
-     <a href="blog.html">Blog</a>
-     <a href="contact.html">About Us</a>
-    </nav>
-  </header>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">TECHFUTURE AI</div>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active" href="contact.html">About</a></li>
+      <li><a href="blog.html">Blog</a></li>
+    </ul>
+  </nav>
 
-  <main>
-    <article>
-      <h2>Blog Post 1</h2>
-      <p>This is a short summary of the first blog post.</p>
-    </article>
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <img src="../images/home/" alt="AI Blog Header">
+    <div class="hero-overlay">
+      <h1>AI Insights Blog</h1>
+      <p>Cutting-edge research and industry perspectives</p>
+    </div>
+  </section>
 
-    <article>
-      <h2>Blog Post 2</h2>
-      <p>This is a short summary of the second blog post.</p>
-    </article>
-  </main>
+  <!-- Featured Post -->
+  <section class="featured-post">
+    <div class="container">
+      <div class="featured-content">
+        <span class="category-tag">Featured</span>
+        <h2>The Future of Quantum Machine Learning</h2>
+        <p class="meta">By Dr. Elena Rodriguez | June 15, 2023 | 8 min read</p>
+        <p class="excerpt">Exploring how quantum computing is revolutionizing neural network architectures and enabling breakthroughs in drug discovery and materials science.</p>
+        <a href="#" class="read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="featured-image">
+        <img src="../images/home/ai-technology-brain-background-digital-transformation-concept.jpg" alt="Quantum AI">
+      </div>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2025 My Blog</p>
+  <!-- Blog Grid -->
+  <section class="blog-grid-section">
+    <div class="container">
+      <h2 class="section-title">Latest Articles</h2>
+      <div class="blog-grid">
+        <!-- Article 1 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="../images/home/ai-technology-microchip-background-futuristic-innovation-technology-remix.jpg" alt="Neural Networks">
+            <span class="category-tag">Research</span>
+          </div>
+          <div class="blog-content">
+            <h3>Advancements in Spiking Neural Networks</h3>
+            <p class="meta">By Raj Patel | May 28, 2023 | 6 min read</p>
+            <p class="excerpt">How bio-inspired SNNs are enabling more energy-efficient AI systems that mimic biological brain processes.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 2 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="../images/home/ai-technology-brain-background-digital-transformation-concept.jpg" alt="AI Ethics">
+            <span class="category-tag">Ethics</span>
+          </div>
+          <div class="blog-content">
+            <h3>Implementing Ethical AI Frameworks</h3>
+            <p class="meta">By Dr. Naomi Chen | May 15, 2023 | 7 min read</p>
+            <p class="excerpt">Practical guidelines for developing AI systems that align with human values and reduce algorithmic bias.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 3 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="Edge AI">
+            <span class="category-tag">Technology</span>
+          </div>
+          <div class="blog-content">
+            <h3>Edge AI: Bringing Intelligence to Devices</h3>
+            <p class="meta">By Michael Zhang | April 30, 2023 | 5 min read</p>
+            <p class="excerpt">The growing trend of deploying lightweight ML models directly on IoT devices and its implications.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 4 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="../images/home/ai-technology-microchip-background-futuristic-innovation-technology-remix.jpg" alt="Computer Vision">
+            <span class="category-tag">Applications</span>
+          </div>
+          <div class="blog-content">
+            <h3>Computer Vision in Medical Diagnostics</h3>
+            <p class="meta">By Dr. Sarah Johnson | April 18, 2023 | 9 min read</p>
+            <p class="excerpt">How deep learning is transforming radiology and pathology with unprecedented accuracy.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 5 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="../images/home/ai-technology-brain-background-digital-transformation-concept.jpg" alt="Natural Language">
+            <span class="category-tag">NLP</span>
+          </div>
+          <div class="blog-content">
+            <h3>Beyond GPT: Next-Gen Language Models</h3>
+            <p class="meta">By Priya Kumar | April 5, 2023 | 8 min read</p>
+            <p class="excerpt">Emerging architectures that address the limitations of current transformer-based models.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+
+        <!-- Article 6 -->
+        <article class="blog-card">
+          <div class="blog-image">
+            <img src="https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80" alt="AI Governance">
+            <span class="category-tag">Policy</span>
+          </div>
+          <div class="blog-content">
+            <h3>Global AI Regulation Trends in 2023</h3>
+            <p class="meta">By David Wilson | March 22, 2023 | 6 min read</p>
+            <p class="excerpt">Comparative analysis of AI governance approaches across major economies.</p>
+            <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Stay Updated on AI Advancements</h2>
+        <p>Subscribe to our monthly research digest featuring the latest breakthroughs, case studies, and technical papers.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit">Subscribe <i class="fas fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <!-- Same footer as other pages -->
   </footer>
+
+  <script src="./script.js"></script>
 </body>
 </html>

@@ -1,39 +1,374 @@
-body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #fff0f5;
-    color: #111;
-    margin: 0;
+/* About Page Specific Styles */
+.about-hero {
+  position: relative;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-overlay h1 {
+  font-size: 4.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.hero-overlay p {
+  font-size: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-section {
+  padding: 8rem 0;
+  background: white;
+}
+
+.about-section .container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+}
+
+.about-content {
+  flex: 1;
+}
+
+.about-content h2 {
+  font-size: 2.8rem;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.about-content p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.about-image {
+  flex: 1;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.about-image:hover img {
+  transform: scale(1.03);
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 4rem auto 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #3498db;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  width: 50%;
+  padding: 0 3rem;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+.timeline-year {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(52,152,219,0.3);
+}
+
+.timeline-item:nth-child(odd) .timeline-year {
+  right: -120px;
+}
+
+.timeline-item:nth-child(even) .timeline-year {
+  left: -120px;
+}
+
+.timeline-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.timeline-content h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Tech Section */
+.tech-section {
+  padding: 6rem 0;
+  background: white;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.tech-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+}
+
+.tech-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.tech-card h3 {
+  padding: 1.5rem 1.5rem 0;
+  color: #2c3e50;
+  font-size: 1.4rem;
+}
+
+.tech-card p {
+  padding: 1rem 1.5rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.tech-link {
+  display: inline-block;
+  padding: 0 1.5rem 1.5rem;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.tech-link:hover {
+  color: #2980b9;
+}
+
+.tech-link i {
+  margin-left: 5px;
+}
+
+/* Team Section */
+.team-section {
+  padding: 6rem 0;
+  background: #f8f9fa;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  margin-top: 4rem;
+}
+
+.team-card {
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border: 5px solid #f1f1f1;
+}
+
+.team-card h3 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.position {
+  color: #3498db;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.bio {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-links a {
+  color: #7f8c8d;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #3498db;
+}
+
+/* Mission Section */
+.mission-section {
+  padding: 8rem 0;
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+  color: white;
+  text-align: center;
+}
+
+.mission-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mission-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 2rem;
+}
+
+.mission-statement {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 4rem;
+}
+
+.mission-stats {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem 0 4rem;
+}
+
+.stat {
+  text-align: center;
+}
+
+.number {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .about-section .container {
+    flex-direction: column;
   }
   
-  header {
-    background-color: #a52a2a;
-    color: white;
-    padding: 20px;
-    text-align: center;
+  .timeline::before {
+    left: 30px;
   }
   
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 0;
   }
   
-  main {
-    padding: 20px;
+  .timeline-item:nth-child(even) {
+    left: 0;
   }
   
-  section {
-    background: white;
-    padding: 15px;
-    border-radius: 6px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  .timeline-year {
+    left: 0 !important;
+    right: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-overlay h1 {
+    font-size: 3rem;
   }
   
-  footer {
-    background-color: #a52a2a;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
+  .mission-stats {
+    flex-direction: column;
+    gap: 2rem;
   }
-  
+}
